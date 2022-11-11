@@ -1,0 +1,172 @@
+<br/>
+<br/>
+<br/>
+<div class="container">
+  <div class="row text-center">
+    <h1 style="color: #3BB0D4">
+      {{title}}
+    </h1>
+  </div>
+  <br/>
+  <br/>
+  <form [formGroup]="cableForm" novalidate>
+    <div class="row">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row">
+            <div class="form-group">
+              <label>Cable Name:</label>
+              <input class="form-control" formControlName="cableName" type="text">
+            </div>
+            <div
+              *ngIf="cableForm.controls['cableName'].invalid && (cableForm.controls['cableName'].dirty || cableForm.controls['cableName'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="cableForm.controls['cableName'].errors && cableForm.controls['cableName'].errors['required']">
+                Cable Name is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Cable Type:</label>
+              <input class="form-control" formControlName="cableType" type="text">
+            </div>
+            <div
+              *ngIf="cableForm.controls['cableType'].invalid && (cableForm.controls['cableType'].dirty || cableForm.controls['cableType'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="cableForm.controls['cableType'].errors && cableForm.controls['cableType'].errors['required']">
+                Cable Type is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Length:</label>
+              <input class="form-control" formControlName="length" type="number">
+            </div>
+            <div
+              *ngIf="cableForm.controls['length'].invalid && (cableForm.controls['length'].dirty || cableForm.controls['length'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="cableForm.controls['length'].errors && cableForm.controls['length'].errors['required']">
+                Length is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Price:</label>
+              <input class="form-control" formControlName="price" type="number">
+            </div>
+            <div
+              *ngIf="cableForm.controls['price'].invalid && (cableForm.controls['price'].dirty || cableForm.controls['price'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="cableForm.controls['price'].errors && cableForm.controls['price'].errors['required']">
+                Price is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" style="margin-left: 8%">
+          <div class="row">
+
+<!--            <div class="form-group">-->
+<!--              <app-upload-images [selectedFiles]="images"></app-upload-images>-->
+<!--            </div>-->
+<!--            <div-->
+<!--              *ngIf="cableForm.controls['images'].invalid && (cableForm.controls['images'].dirty || cableForm.controls['images'].touched)"-->
+<!--              class="alert alert-danger">-->
+<!--              <div *ngIf="cableForm.controls['images'].errors && cableForm.controls['images'].errors['required']">-->
+<!--                Image is required.-->
+<!--              </div>-->
+<!--            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label>Thickness:</label>
+          <input class="form-control" formControlName="thickness" type="number">
+        </div>
+        <div
+          *ngIf="cableForm.controls['thickness'].invalid && (cableForm.controls['thickness'].dirty || cableForm.controls['thickness'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="cableForm.controls['thickness'].errors && cableForm.controls['thickness'].errors['required']">
+            Thickness is required.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row">
+            <div class="form-group">
+              <label>Status:</label>
+              <br/>
+              <mat-form-field appearance="fill" style="width: 100%">
+                <mat-label>Choose Status:</mat-label>
+                <br/>
+                <mat-select [disabled]="disableSelect && disableSelect.value != null && disableSelect.value"
+                            class="form-control" formControlName="statusMap">
+                  <mat-option [value]="{name: 'FINISHED', value: 'Tükendi'}">Tükendi</mat-option>
+                  <mat-option [value]="{name: 'USED', value: '2. el'}">2. el</mat-option>
+                  <mat-option [value]="{name: 'NEW', value: 'Sıfır'}">Sıfır</mat-option>
+                </mat-select>
+
+<!--                <mat-select formControlName="statusMap" name="status" class="form-control">-->
+<!--                  <mat-option *ngFor="let status of statuses" [value]="status">-->
+<!--                    {{status.value}}-->
+<!--                  </mat-option>-->
+<!--                </mat-select>-->
+              </mat-form-field>
+            </div>
+            <div
+              *ngIf="cableForm.controls['statusMap'].invalid && (cableForm.controls['statusMap'].dirty || cableForm.controls['statusMap'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="cableForm.controls['statusMap'].errors && cableForm.controls['statusMap'].errors['required']">
+                Status is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-9">
+                  <label>Activated Date:</label>
+                  <br/>
+                  <div>
+                    <mat-form-field style="width: 100%">
+                      <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date"
+                             [min]="minDate" [max]="maxDate" [disabled]="disabled" class="form-control"
+                             formControlName="activatedDate">
+                      <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+                      <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+                                               [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+                                               [touchUi]="touchUi"
+                                               [color]="color" [enableMeridian]="enableMeridian">
+                      </ngx-mat-datetime-picker>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              *ngIf="cableForm.controls['activatedDate'].invalid && (cableForm.controls['activatedDate'].dirty || cableForm.controls['activatedDate'].touched)"
+              class="alert alert-danger">
+              <div
+                *ngIf="cableForm.controls['activatedDate'].errors && cableForm.controls['activatedDate'].errors['required']">
+                Activated Date is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-right">
+        <button class="btn btn-info" style="margin-right: 1%" routerLink="/cables">Back</button>
+        <button class="btn btn-success" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </form>
+  <br/>
+<!--  <p>Form value: {{ cableForm.value | json }}</p>-->
+<!--  <p>Form status: {{ cableForm.status | json }}</p>-->
+</div>
+

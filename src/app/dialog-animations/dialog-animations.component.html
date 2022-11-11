@@ -1,0 +1,15 @@
+<div class="row">
+  <h4 mat-dialog-title>Delete file</h4>
+</div>
+<div class="row">
+  <div mat-dialog-content>
+    Are you sure, you want to delete this row?
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div mat-dialog-actions class="text-right">
+    <button mat-button mat-dialog-close class="btn btn-info" (click)="closeDialog()" style="margin-right: 2%;">No</button>
+    <button mat-button mat-dialog-close class="btn btn-danger" (click)="okSelected()">Yes</button>
+  </div>
+</div>
