@@ -1,0 +1,132 @@
+<br/>
+
+<br/>
+<h1 class="text-center" style="color: gray">Choose Data</h1>
+<div class="container" style="border: groove">
+  <div class="row text-center">
+    <form [formGroup]="dataModel" novalidate>
+      <div class="row">
+        <br/>
+        <br/>
+        <div class="col-md-4" style="margin-left: 5%">
+          <mat-label>Choose Java Class</mat-label>
+        </div>
+        <div class="col-md-7">
+          <mat-select formControlName="javaClass" class="form-control"
+                      (click)="javaClassesSelectToggeled()">
+            <mat-option *ngFor="let javaClass of javaClasses" [value]="javaClass">
+              {{javaClass.slice(javaClass.lastIndexOf('.') + 1)}}
+            </mat-option>
+          </mat-select>
+          <div
+            *ngIf="dataModel.controls['javaClass'].invalid && (dataModel.controls['javaClass'].dirty || dataModel.controls['javaClass'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="dataModel.controls['javaClass'].errors && dataModel.controls['javaClass'].errors['required']">
+              Java class is required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br/>
+        <br/>
+        <div class="col-md-4" style="margin-left: 5%">
+          <mat-label>Id Range</mat-label>
+        </div>
+        <div class="col-md-7">
+          <div class="row" formGroupName="idRange">
+            <div class="col-md-6">
+              <input class="form-control" formControlName="start" type="number" [min]="1">
+              <div
+                *ngIf="dataModel.get('idRange.start')?.invalid && (dataModel.get('idRange.start')?.dirty || dataModel.get('idRange.start')?.touched)"
+                class="alert alert-danger">
+                <div *ngIf="dataModel.get('idRange.start')?.errors">
+                  ID min value must be greater than 0
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" formControlName="end" type="number" [min]="dataModel.value['idRange'].start + 1">
+              <div
+                *ngIf="dataModel.get('idRange.end')?.invalid && (dataModel.get('idRange.end')?.dirty || dataModel.get('idRange.end')?.touched)"
+                class="alert alert-danger">
+                <div *ngIf="dataModel.get('idRange.end')?.errors">
+                  ID max value must be > min value
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br/>
+        <br/>
+        <div class="col-md-4" style="margin-left: 5%">
+          <mat-label>Export File Type</mat-label>
+        </div>
+        <div class="col-md-7">
+          <mat-select formControlName="fileType" class="form-control" [compareWith]="compareTwoOptions">
+            <mat-option *ngFor="let fileType of filetypes" [value]="fileType">
+              {{fileType.value}}
+            </mat-option>
+          </mat-select>
+          <div
+            *ngIf="dataModel.controls['fileType'].invalid && (dataModel.controls['fileType'].dirty || dataModel.controls['fileType'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="dataModel.controls['fileType'].errors && dataModel.controls['fileType'].errors['required']">
+              File type is required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br/>
+        <br/>
+        <div class="col-md-4" style="margin-left: 15%">
+          <mat-checkbox formControlName= "databaseFieldNamesToSecondRow">Also export database field names to second row (row:2)</mat-checkbox>
+        </div>
+      </div>
+      <div class="row" *ngIf="dataModel.value['fileType'] && dataModel.value['fileType'].name === 'CSV'">
+        <br/>
+        <br/>
+        <div class="col-md-4" style="margin-left: 5%">
+          <mat-label>CSV Deliminator</mat-label>
+        </div>
+        <div class="col-md-7">
+          <mat-select formControlName="delimiter" class="form-control" [compareWith]="compareTwoOptions">
+            <mat-option *ngFor="let delimiter of delimiters" [value]="delimiter">
+              {{delimiter.value}}
+            </mat-option>
+          </mat-select>
+        </div>
+
+      </div>
+      <div class="row">
+        <br/>
+        <br/>
+        <div class="col-md-4" style="margin-left: 5%">
+          <mat-label>Date Time Format</mat-label>
+        </div>
+        <div class="col-md-7">
+          <mat-select formControlName="dateTimeFormat" class="form-control" [compareWith]="compareTwoOptions">
+            <mat-option *ngFor="let dateTimeFormat of dateTimeFormats" [value]="dateTimeFormat">
+              {{dateTimeFormat.value}}
+            </mat-option>
+          </mat-select>
+        </div>
+      </div>
+      <div class="row text-right" style="margin-right: 2%">
+        <br/>
+        <br/>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-8">
+          <button class="btn btn-success" (click)="getDataPreview()">Next</button>
+          <br/>
+          <br/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

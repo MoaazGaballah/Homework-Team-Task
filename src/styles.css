@@ -3,3 +3,18 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 /*@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";*/
 /*@import "~@angular/material/prebuilt-themes/purple-green.css";*/
+
+.blue-snackbar {
+  background: #31B0D5;
+}
+
+.red-snackbar {
+  background: #D9534F;
+}
+.mat-snack-bar-container {
+  text-align: center;
+}
+
+.mat-simple-snackbar {
+  display: inline-block !important;
+}

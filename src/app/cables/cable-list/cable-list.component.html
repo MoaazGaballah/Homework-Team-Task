@@ -6,10 +6,10 @@
   </div>
   <br/>
   <div class="row mat-elevation-z8">
-<!--    <mat-form-field appearance="standard">-->
-<!--      <mat-label>Filter</mat-label>-->
-<!--      <input matInput (keyup)="applyFilter($event)" placeholder="Enter here... Example ilk" #input>-->
-<!--    </mat-form-field>-->
+    <mat-form-field appearance="standard" style="width: 80%">
+      <mat-label>Filter</mat-label>
+      <input matInput (keydown.enter)="applyFilter($event)" placeholder="Enter here your query then press 'enter' button" #input>
+    </mat-form-field>
 
     <table mat-table [dataSource]="dataSource" matSort id="cableTable">
       <!-- Cable Name Column -->
@@ -84,6 +84,7 @@
       [pageSize]="responseData.size"
       [pageSizeOptions]="[5, 10, 25, 100]"
       (page) = "pageEvent = $event; onPaginateChange($event)"
+      showFirstLastButtons
     ></mat-paginator>
   </div>
 </div>

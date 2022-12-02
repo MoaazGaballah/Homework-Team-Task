@@ -1,0 +1,65 @@
+<br/>
+<br/>
+
+<h1 class="text-center" style="color: gray">Preview Data</h1>
+<div class="container" style="border: groove">
+  <div class="row text-center">
+<!--    <table id="dataTable" class="table table-bordered table-striped text-center">-->
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th *ngFor = "let header of headers"> {{header}} </th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--      <tr *ngFor = "let record of dataGrid">-->
+<!--&lt;!&ndash;        <td *ngFor = "let record of dataGrid"> {{record}} </td>&ndash;&gt;-->
+<!--        <td> {{record}} </td>-->
+<!--&lt;!&ndash;        <td> {{test(record)}} </td>&ndash;&gt;-->
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+    <table id="dataTable" class="table table-bordered table-striped text-center">
+      <thead>
+      <tr class="text-center">
+        <th *ngFor = "let header of headers"> {{header}} </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let record of dataGrid">
+<!--        <td> {{getValue(dataGrid, header)}} </td>-->
+        <td *ngFor = "let header of headers">
+          <span *ngIf="header !== 'image'">{{getValue(record, header)}}</span>
+          <img *ngIf="header === 'image' && getValue(record, header) !== null" [src]="getValue(record, header)" />
+        </td>
+      </tr>
+<!--        <th> {{test(header)}} </th>-->
+<!--        <td> {{dataGrid[header]}} </td>-->
+
+
+      </tbody>
+    </table>
+
+<!--    <table mat-table [dataSource]="dataGrid" matSort id="cableTable">-->
+<!--&lt;!&ndash;      &lt;!&ndash; Cable Name Column &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <ng-container matColumnDef="cableName">&ndash;&gt;-->
+<!--&lt;!&ndash;        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cable Name</th>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td mat-cell *matCellDef="let row"> {{row.cableName}} </td>&ndash;&gt;-->
+<!--&lt;!&ndash;      </ng-container>&ndash;&gt;-->
+
+<!--      <tr mat-header-row *matHeaderRowDef="headers"></tr>-->
+<!--      <tr mat-row *matRowDef="let row; columns: headers;"></tr>-->
+<!--    </table>-->
+    <div class="row">
+      <br/>
+      <br/>
+      <div class="text-left col-md-3" style="margin-left: 2%">
+        <button class="btn btn-success" (click)="goBack()">Go Back</button>
+      </div>
+      <div class="text-right col-md-8" style="margin-left: 4%">
+        <button class="btn btn-success" (click)="download()">Download</button>
+        <br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+</div>

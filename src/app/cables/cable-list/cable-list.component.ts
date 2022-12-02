@@ -2,7 +2,7 @@ import {AfterViewInit, Component, ViewChild, ViewEncapsulation} from '@angular/c
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator, PageEvent} from "@angular/material/paginator";
 import {MatSort, Sort} from "@angular/material/sort";
-import {CableService} from "../cable.service";
+import {CableService} from "../../services/cable.service";
 import {ChangeDetectorRef} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {DialogAnimationsComponent} from "../../dialog-animations/dialog-animations.component";
@@ -41,7 +41,6 @@ export class CableListComponent {
     'actions'
   ];
   dataSource: MatTableDataSource<CableData>;
-  showData: boolean = false;
   responseData: any = [];
   pageEvent!: PageEvent;
   filterValue: string = '';
@@ -59,41 +58,76 @@ export class CableListComponent {
     this.dataSource = new MatTableDataSource();
   }
 
+  initializePageEvent() {
+    this.pageEvent = new PageEvent();
+    this.pageEvent.pageSize = 5;
+    this.pageEvent.pageIndex = 0;
+  }
+
+  initializeSort() {
+    this.sort = new MatSort();
+    this.sort.direction = 'asc';
+    this.sort.active = 'id';
+  }
+
   ngOnInit() {
-    this.cableService.getCables(this.filterValue, 5, 0, 'id', 'asc').subscribe(async response => {
+    this.cableService.getCables(
+      this.filterValue,
+      5,
+      0,
+      this.getSortingColumnName(this.sort.active),
+      this.sort.direction).subscribe(async response => {
       this.responseData = await <MatTableDataSource<any>>response;
       this.dataSource = this.responseData.content;
-
       if (response && Array.isArray(response)) {
-        this.showData = true;
         this.dataSource = new MatTableDataSource(response);
         this.ref.detectChanges();
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-      } else {
-        this.showData = false;
       }
     });
     this.sort.sortChange.subscribe(() => {
       if (this.pageEvent == null) {
-        this.pageEvent = new PageEvent();
-        this.pageEvent.pageSize = 5;
-        this.pageEvent.pageIndex = 0;
+        this.initializePageEvent();
       }
-      this.cableService.getCables(this.filterValue, this.pageEvent.pageSize, this.pageEvent.pageIndex, this.getSortingColumnName(this.sort.active), this.sort.direction).subscribe(async response => {
+      this.cableService.getCables(
+        this.filterValue,
+        this.pageEvent.pageSize,
+        this.pageEvent.pageIndex,
+        this.getSortingColumnName(this.sort.active),
+        this.sort.direction).subscribe(async response => {
         this.responseData = await <MatTableDataSource<any>>response;
         this.dataSource = this.responseData.content;
-
         if (response && Array.isArray(response)) {
-          this.showData = true;
           this.dataSource = new MatTableDataSource(response);
           this.ref.detectChanges();
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
-        } else {
-          this.showData = false;
         }
       });
+    })
+  }
+
+  applyFilter(event: Event) {
+    if (this.pageEvent == null) {
+      this.initializePageEvent();
+    }
+    this.filterValue = (event.target as HTMLInputElement).value
+    this.cableService.getCables(
+      this.filterValue,
+      this.pageEvent.pageSize,
+      this.pageEvent.pageIndex,
+      this.getSortingColumnName(this.sort.active),
+      this.sort.direction
+    ).subscribe(async response => {
+      this.responseData = await <MatTableDataSource<any>>response;
+      this.dataSource = this.responseData.content;
+      if (response && Array.isArray(response)) {
+        this.dataSource = new MatTableDataSource(response);
+        this.ref.detectChanges();
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      }
     })
   }
 
@@ -144,11 +178,11 @@ export class CableListComponent {
   getColor(status: string) {
     switch (status) {
       case 'NEW':
-        return '#3BB0D4';
+        return '#31B0D5';
       case 'FINISHED':
-        return '#C9302C';
+        return '#D9534F';
       case 'USED':
-        return '#71c454';
+        return '#5CB85C';
     }
     return '';
   }
@@ -164,23 +198,20 @@ export class CableListComponent {
   }
 
   onEdit(rowDetails: CableData) {
-    // rowDetails['statusMap'] = {
-    //   value: rowDetails.cableStatusValue,
-    //   name: rowDetails.status
-    // }
     rowDetails = Object.assign(rowDetails, {
       statusMap: {
         value: rowDetails.cableStatusValue,
         name: rowDetails.status
       }
-
     })
-    console.log("edit", rowDetails)
     this.router.navigate(['/cables', 'new'], {queryParams: {cable: JSON.stringify(rowDetails)}})
   }
 
   onDelete(rowDetails: CableData) {
-    if (rowDetails.id != null)
+    if (rowDetails.id != null){
+      if (this.pageEvent == null) {
+        this.initializePageEvent();
+      }
       this.cableService.deleteCable(
         rowDetails.id,
         this.pageEvent.pageSize,
@@ -191,8 +222,9 @@ export class CableListComponent {
           this.responseData = await <MatTableDataSource<any>>response;
           this.dataSource = this.responseData.content;
           this.ref.detectChanges();
-          this.openSnackBar('That row has been deleted!');
+          this.openSnackBar('Deleted successfully!', 'blue-snackbar');
         })
+    }
   }
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string, rowDetails: CableData): void {
@@ -205,9 +237,10 @@ export class CableListComponent {
     });
   }
 
-  openSnackBar(message: string) {
+  openSnackBar(message: string, cssClass: string) {
     this._snackBar.open(message, undefined, {
       duration: this.durationInSeconds * 1000,
+      panelClass: [cssClass]
     });
   }
 }

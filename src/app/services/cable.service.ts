@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Subject} from "rxjs";
-import {Cable} from "./cable.model";
-import {HttpService} from "../shared/http.service";
+import {Cable} from "../models/cable/cable.model";
+import {HttpService} from "./common/http.service";
 import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Injectable()
