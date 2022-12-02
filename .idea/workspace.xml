@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4bff7cea-c97b-4be5-a06f-0ae22075f31e" name="Changes" comment="frontend file 2">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3038bf37-d03d-4f7f-b35e-0e9450d814c2/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3038bf37-d03d-4f7f-b35e-0e9450d814c2/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3038bf37-d03d-4f7f-b35e-0e9450d814c2/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3038bf37-d03d-4f7f-b35e-0e9450d814c2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/76c48ec0-728d-4baa-83d3-d526159a339c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/76c48ec0-728d-4baa-83d3-d526159a339c/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/76c48ec0-728d-4baa-83d3-d526159a339c/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/76c48ec0-728d-4baa-83d3-d526159a339c/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/76c48ec0-728d-4baa-83d3-d526159a339c/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.idea/codestream.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/controllers/DataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/cable/AbstractModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/data/DateTimeFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/data/Delimiter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/data/IdRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/data/export/ExportDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/data/impor/FileType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/repositories/AbstractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/services/CSVHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/services/DataServise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/test/java/com/moaaz_gaballah/controllers/CableControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/test/java/com/moaaz_gaballah/services/CableServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/target/classes/com/moaaz_gaballah/MoaazGaballahApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/target/test-classes/com/moaaz_gaballah/MoaazGaballahApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-detail/cable-detail.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-detail/cable-detail.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-detail/cable-detail.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-detail/cable-detail.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/data/export/form/form.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/data/export/form/form.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/data/export/form/form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/data/export/preview/preview.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/data/export/preview/preview.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/data/export/preview/preview.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/models/data/SelectOption.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/models/data/id-range.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/common/state.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/data.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Controllers/CableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/controllers/CableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/MoaazGaballahApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/MoaazGaballahApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Models/Cable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/external/Cable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Models/CableDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/cable/CableDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Models/CableData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/cable/CableData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Models/CableMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/cable/CableMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Models/CableStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/cable/CableStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Models/EnumInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/models/internal/cable/EnumInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Repositories/CableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/repositories/CableRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/Services/CableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/moaaz_gaballah/services/CableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/test/java/com/moaaz_gaballah/Controllers/CableControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/test/java/com/moaaz_gaballah/Services/CableServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-edit/cable-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-edit/cable-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-edit/cable-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-edit/cable-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-list/cable-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-list/cable-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-list/cable-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable-list/cable-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/models/cable/cable.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/cables/cable.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/cable.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/common/http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="COMPILER_PROCESS_ADDITIONAL_VM_OPTIONS" value="-Djps.track.ap.dependencies=false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2GknUmZSfnMhABIwdtWbrueqPZt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/muaz&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;71d5c589ab1b81031c473b1a621c4821&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.moaaz_gaballah.Repositories" />
+      <recent name="com.moaaz_gaballah.Controllers" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Diffblue Cover.Write tests for method CableService.deleteCable">
+    <configuration name="CableControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moaaz_Gaballah" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moaaz_gaballah.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.moaaz_gaballah.Controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.moaaz_gaballah.controllers.CableControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CableServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moaaz_Gaballah" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moaaz_gaballah.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.moaaz_gaballah.Services" />
+      <option name="MAIN_CLASS_NAME" value="com.moaaz_gaballah.services.CableServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CableServiceTest.testGetCable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moaaz_Gaballah" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moaaz_gaballah.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.moaaz_gaballah.Services" />
+      <option name="MAIN_CLASS_NAME" value="com.moaaz_gaballah.services.CableServiceTest" />
+      <option name="METHOD_NAME" value="testGetCable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CableServiceTest.testGetCable3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Moaaz_Gaballah" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moaaz_gaballah.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.moaaz_gaballah.Services" />
+      <option name="MAIN_CLASS_NAME" value="com.moaaz_gaballah.services.CableServiceTest" />
+      <option name="METHOD_NAME" value="testGetCable3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoaazGaballahApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Moaaz_Gaballah" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.moaaz_gaballah.MoaazGaballahApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for method CableService.deleteCable" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="Moaaz_Gaballah" />
+      <settings run-config-name="Write tests for method CableService.deleteCable" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.moaaz_gaballah.Services.CableService.deleteCable:(Ljava/lang/Integer;)V" />
+      </settings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4bff7cea-c97b-4be5-a06f-0ae22075f31e" name="Changes" comment="" />
+      <created>1667067265189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667067265189</updated>
+      <workItem from="1667067271930" duration="1948000" />
+      <workItem from="1667197883358" duration="763000" />
+      <workItem from="1667198819775" duration="4356000" />
+      <workItem from="1667205946238" duration="688000" />
+      <workItem from="1667206710788" duration="9002000" />
+      <workItem from="1667723305722" duration="4392000" />
+      <workItem from="1667916934713" duration="23392000" />
+      <workItem from="1668175473602" duration="2198000" />
+      <workItem from="1668190260345" duration="4302000" />
+      <workItem from="1668198103225" duration="125000" />
+      <workItem from="1668198249287" duration="2350000" />
+      <workItem from="1668246367461" duration="2631000" />
+      <workItem from="1668522213748" duration="90000" />
+      <workItem from="1668522312804" duration="1250000" />
+      <workItem from="1668579990059" duration="4653000" />
+      <workItem from="1668589776884" duration="3000" />
+      <workItem from="1669290835729" duration="363000" />
+      <workItem from="1669613787813" duration="2474000" />
+      <workItem from="1669618398760" duration="12274000" />
+      <workItem from="1669643577986" duration="11111000" />
+      <workItem from="1669872954303" duration="9278000" />
+      <workItem from="1669961268015" duration="3606000" />
+      <workItem from="1669977790910" duration="6176000" />
+    </task>
+    <task id="LOCAL-00001" summary="frontend file">
+      <created>1668157257715</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668157257715</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="frontend file" />
+    <MESSAGE value="frontend file 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend file 2" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
